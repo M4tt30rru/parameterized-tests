@@ -73,9 +73,9 @@ public class SamplesOfUsageTest {
     }
     private Object named4() { return new Object[]{new String[]{"AAA", "BBB"}}; }
 
-    @Test
-    @Parameters(source = ParametersReaderProvidersTest.OneIntegerProvider.class)
-    public void paramsFromExternalClass(int integer) { }
+//    @Test
+//    @Parameters(source = ParametersReaderProvidersTest.OneIntegerProvider.class)
+//    public void paramsFromExternalClass(int integer) { }
 
     @Test
     @Parameters
@@ -134,9 +134,9 @@ public class SamplesOfUsageTest {
     @FileParameters(value = "classpath:with_header.csv", mapper = CsvWithHeaderMapper.class)
     public void loadParamsFromCsvWithHeader(int id, String name) { }
 
-    @Test
-    @Parameters({ "01.12.2012" })
-    public void convertParams(@Param(converter = ParamsConverterTest.SimpleDateConverter.class) Date date) {}
+//    @Test
+//    @Parameters({ "01.12.2012" })
+//    public void convertParams(@Param(converter = ParamsConverterTest.SimpleDateConverter.class) Date date) {}
 
     @Test
     @Parameters("please\\, escape commas if you use it here and don't want your parameters to be splitted")
